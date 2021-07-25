@@ -9,7 +9,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 from flask import request
-
+from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, jsonify, render_template 
 
 # Create connection to Hawaii.sqlite file
@@ -36,12 +36,18 @@ TE = Base.classes.TE_Data
 WR = Base.classes.WR_Data
 Highlights = Base.classes.Highlights_Data
 BoxPlot = Base.classes.BoxPlot
+
 # Initialize Flask
 #################################################
 app = Flask(__name__)
-app.config['JSON_SORT_KEYS'] = False   
-
+# app.config['JSON_SORT_KEYS'] = False   
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # Create Flask Routes 
+
+db = SQLAlchemy(app)
+
+from .models import Pet
 
 # Create root route
 @app.route("/")
