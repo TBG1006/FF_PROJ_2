@@ -2,7 +2,7 @@
 ################################################# 
 
 import numpy as np
-
+import os
 import sqlalchemy
 import datetime as dt
 from sqlalchemy.ext.automap import automap_base
@@ -10,7 +10,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 from flask import request
 from flask_sqlalchemy import SQLAlchemy
-from flask import Flask, jsonify, render_template 
+from flask import Flask, jsonify, render_template, redirect
 
 # Create connection to Hawaii.sqlite file
 #################################################
@@ -41,7 +41,7 @@ BoxPlot = Base.classes.BoxPlot
 #################################################
 app = Flask(__name__)
 # app.config['JSON_SORT_KEYS'] = False   
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('postgresql://postgres:postgres@localhost:5432/NFL_Fantasy_Data', '')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # Create Flask Routes 
 
