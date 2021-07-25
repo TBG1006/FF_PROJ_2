@@ -50,7 +50,7 @@ class BoxPlot(db.Model):
 class DEF_Data(db.Model):
     __tablename__ = 'DEF_Data'
 
-    Name = db.Column(db.text)
+    Name = db.Column(db.text, primary_key=True)
     Team = db.Column(db.text)
     Position = db.Column(db.text)
     AverageDraftPosition = db.Column(db.double)
@@ -65,7 +65,7 @@ class DEF_Data(db.Model):
 class Highlights_Data(db.Model):
     __tablename__ = 'Highlights_Data'
 
-    Name = db.Column(db.text)
+    Name = db.Column(db.text, primary_key=True)
     Team = db.Column(db.text)
     Position = db.Column(db.text)
     AverageDraftPosition = db.Column(db.double)
@@ -80,7 +80,7 @@ class Highlights_Data(db.Model):
 class K_Data(db.Model):
     __tablename__ = 'K_Data'
 
-    Name = db.Column(db.text)
+    Name = db.Column(db.text, primary_key=True)
     Team = db.Column(db.text)
     Position = db.Column(db.text)
     AverageDraftPosition = db.Column(db.double)
@@ -95,7 +95,7 @@ class K_Data(db.Model):
 class Position_dropdown(db.Model):
     __tablename__ = 'Position_dropdown'
     
-    Position = db.Column(db.text)
+    Position = db.Column(db.text, primary_key=True)
     
     def __repr__(self):
         return 'Position_dropdown %r>' % (self.name)
@@ -103,7 +103,7 @@ class Position_dropdown(db.Model):
 class QB_Data(db.Model):
     __tablename__ = 'QB_Data'
 
-    Name = db.Column(db.text)
+    Name = db.Column(db.text, primary_key=True)
     Team = db.Column(db.text)
     Position = db.Column(db.text)
     AverageDraftPosition = db.Column(db.double)
@@ -118,7 +118,7 @@ class QB_Data(db.Model):
 class RB_Data(db.Model):
     __tablename__ = 'RB_Data'
 
-    Name = db.Column(db.text)
+    Name = db.Column(db.text, primary_key=True)
     Team = db.Column(db.text)
     Position = db.Column(db.text)
     AverageDraftPosition = db.Column(db.double)
@@ -133,7 +133,7 @@ class RB_Data(db.Model):
 class TE_Data(db.Model):
     __tablename__ = 'TE_Data'
 
-    Name = db.Column(db.text)
+    Name = db.Column(db.text, primary_key=True)
     Team = db.Column(db.text)
     Position = db.Column(db.text)
     AverageDraftPosition = db.Column(db.double)
@@ -148,7 +148,7 @@ class TE_Data(db.Model):
 class WR_Data(db.Model):
     __tablename__ = 'WR_Data'
 
-    Name = db.Column(db.text)
+    Name = db.Column(db.text, primary_key=True)
     Team = db.Column(db.text)
     Position = db.Column(db.text)
     AverageDraftPosition = db.Column(db.double)
