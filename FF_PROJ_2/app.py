@@ -47,7 +47,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
-from .models import Pet
+from .models import ADP_DATA, BoxPlot, DEF_Data, Highlights_Data, K_Data, Position_dropdown, QB_Data, RB_Data, TE_Data, WR_Data
 
 # Create root route
 @app.route("/")
