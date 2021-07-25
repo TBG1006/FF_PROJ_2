@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./FF_PROJ_2"
+    ]
+}
