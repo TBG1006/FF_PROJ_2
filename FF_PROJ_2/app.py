@@ -11,7 +11,7 @@ from sqlalchemy import create_engine, func
 from flask import request
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, jsonify, render_template, redirect
-
+import psycopg2
 # Create connection to Hawaii.sqlite file
 #################################################
 
