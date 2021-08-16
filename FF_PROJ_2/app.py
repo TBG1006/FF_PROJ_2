@@ -41,7 +41,7 @@ BoxPlot = Base.classes.BoxPlot
 #################################################
 app = Flask(__name__)
 # app.config['JSON_SORT_KEYS'] = False   
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('postgresql://postgres:postgres@localhost:5432/NFL_Fantasy_Data', '')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # Create Flask Routes 
 
