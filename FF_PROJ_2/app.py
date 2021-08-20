@@ -15,7 +15,7 @@ import psycopg2
 # Create connection to Hawaii.sqlite file
 #################################################
 
-connection_string = "postgres:postgres@localhost:5432/NFL_Fantasy_Data"
+connection_string = "vzlkukmriiznzd:c38e7a99973ed9b4e45557564e64aa8bde7622f41ad7a5a97cba1ce40f81b996@ec2-54-83-82-187.compute-1.amazonaws.com:5432/d3vlcorbe7kki8"
 engine = create_engine(f'postgresql://{connection_string}')
 
 # reflect an existing database into a new model
